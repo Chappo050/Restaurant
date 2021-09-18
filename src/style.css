@@ -1,0 +1,39 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+#content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px 50px 1000px;
+    grid-template-areas:
+    "h h h h h"
+    "m m m m m"
+    "b c c c bg"
+    ;
+}
+
+
+#banner{
+    grid-area: h;
+    position: sticky; top: 0;
+}
+
+#banner >img{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+#nav{
+    grid-area: m;
+    position: sticky; top:200px;
+    background-color: lawngreen;
+}
+
+#main{
+    grid-area: c;
+    background-color:#ccdb6a;
+}
