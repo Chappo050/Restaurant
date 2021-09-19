@@ -8,7 +8,7 @@ module.exports = {
     contact: './src/loadContact.js',
     home: './src/loadHome.js',
     menu: './src/loadMenu.js',
-    load: './src/loadLoad.js',
+    load: './src/pageLoad.js',
   },
   devtool: 'inline-source-map',
   devServer: {
