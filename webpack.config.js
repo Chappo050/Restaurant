@@ -4,11 +4,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    index: './src/index.js',
     contact: './src/loadContact.js',
-    home: './src/loadHome.js',
     menu: './src/loadMenu.js',
     load: './src/pageLoad.js',
+    home: './src/loadHome.js',
+    index: './src/index.js',
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -23,7 +23,6 @@ module.exports = {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-    publicPath: '/',
   },
 
   module: {
