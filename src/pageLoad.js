@@ -1,4 +1,7 @@
 import banner from './Banner.jpg';
+import {loadMenu} from './loadMenu.js';
+import {loadContact} from './loadContact.js';
+import {loadHome, introduction} from './loadHome.js';
 
 function addBanner(element){
     const div = document.createElement('div')
@@ -11,48 +14,41 @@ function addBanner(element){
     element.appendChild(div);
 }
 
+
+function pageSetup (element){
+    const div = document.createElement('div')
+    div.id ="main";
+    div.innerHTML = introduction();
+    element.appendChild(div);
+}
+
+
 function nav(element){
     const div = document.createElement('div')
     div.id ="nav";
 
-    const contact = document.createElement('div')
-    contact.id = 'contact';
-    
-    const menu = document.createElement('div')
-    menu.id = 'menu';
+    const home = document.createElement('a');
+    home.id = "home";
+    home.innerHTML="Home";
+    home.addEventListener('click', loadHome);
+
+    const menu = document.createElement('a');
+    menu.id = "menu";
+    menu.innerHTML="Menu";
+    menu.addEventListener('click', loadMenu);
+
+    const contact = document.createElement('a');
+    contact.id = "contact";
+    contact.innerHTML="Contact";
+    contact.addEventListener('click', loadContact);
 
 
-    div.appendChild(contact);
+    div.appendChild(home);
     div.appendChild(menu);
-    element.appendChild(div);
-}
-function introduction(){
-    return `
-    Welcome to my cafe! My name is Patch!
-    \<br>
-    \<br>
-    Everything in my cafe is home grown and hand picked.
-    \<br>
-    \<br>
-    All of my food is made to be healthy, yet tasty!
-    \<br>
-    \<br>
-    Please check out all of our amazing fresh food on our menu!
-    `
-}
-
-
-function intro(element){
-    const div = document.createElement('div')
-    div.id ="main";
-
-    const intro = document.createElement('p')
-
-    intro.innerHTML = introduction();
-
-    div.appendChild(intro);
+    div.appendChild(contact);
     element.appendChild(div);
 }
 
-export {addBanner, intro, nav}
+
+export {addBanner, pageSetup, nav}
 

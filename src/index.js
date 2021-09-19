@@ -1,5 +1,6 @@
 import './style.css';
-import {addBanner, intro, nav} from './pageLoad.js';
+import {addBanner, pageSetup, nav} from './pageLoad.js';
+import {loadHome} from './loadHome.js';
 
 
 function component(){
@@ -8,9 +9,8 @@ function component(){
     element.id = "content";
 
     addBanner(element);
-    intro(element);
+    pageSetup(element);
     nav(element);
-
     return element;
 }
 
