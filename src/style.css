@@ -8,7 +8,7 @@ html, body {
 #content{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 200px 50px 1000px;
+    grid-template-rows: 200px 50px auto;
     grid-template-areas:
     "h h h h h"
     "m m m m m"
@@ -52,6 +52,7 @@ html, body {
 #main{
     grid-area: c;
     background-color:#ccdb6a;
+    text-align: center;
 }
 
 #home{
